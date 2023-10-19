@@ -125,10 +125,11 @@ model.compile(
     loss=loss
 )
 
-model.fit(dl, epochs=10000)
+model.fit(dl, epochs=10)
 
 model.save("final_model.keras")
 model = keras.saving.load_model("final_model.keras")
+
 
 
     
