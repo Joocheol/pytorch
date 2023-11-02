@@ -35,7 +35,7 @@ class Config:
     dff = 2024
     dropout_rate=0.1
     num_layers = 12
-    epochs = 100
+    epochs = 30
 
 class DataPrep():
     def __init__(self, config):
@@ -175,7 +175,7 @@ model = MyModel(Config)
 model(ds[0:1][0])
 
 optimizer = keras.optimizers.AdamW()
-loss = keras.losses.SparseCategoricalCrossentropy()
+loss = keras.losses.SparseCategoricalCrossentropy(from_logits=True)
     
 model.compile(
     optimizer=optimizer,
