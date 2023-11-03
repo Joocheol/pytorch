@@ -8,7 +8,7 @@ import numpy as np
 import keras_core as keras
 
 
-from dataclasses import dataclass
+from dataclasses import dataclasss
 
 with open("input.txt", "r", encoding="utf-8") as f:
     text = f.read()
